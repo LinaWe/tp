@@ -1,0 +1,21 @@
+git checkout vaisselle
+git add intro.adoc
+git commit -m"vai-rebase-test"
+git checkout master
+git add intro.adoc
+git commit -m"master-rebase-test"
+git checkout vaisselle
+git rebase master
+git add intro.adoc
+git commit -m"solve-confict"
+git rebase --continue
+git rebase --skip
+git checkout master
+git merge vaisselle
+git branch -D vaisselle
+git checkout master
+git log -a --oneline
+git rebase -i a7d8ca1
+git log -a --oneline
+git rebase -i a7d8ca1
+git log -a --oneline
